@@ -1,0 +1,39 @@
+package app;
+
+import entidades.Pessoa;
+import dao.PessoasDAO;
+import entidades.Telefone;
+import dao.TelefonesDAO;
+
+public class TesteDAO {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Pessoa p1 = new Pessoa();
+		
+		//p.setId(2);
+		p1.setNome("Teste10");
+		PessoasDAO.inserirPessoa(p1);
+		
+		Pessoa p2 = new Pessoa();
+		
+		//p.setId(3);
+		p2.setNome("Teste11");
+		PessoasDAO.inserirPessoa(p2);
+
+		Telefone t1 = new Telefone();
+		t1.setPessoaID(0);
+		t1.setTelefone("4132463644");
+		TelefonesDAO.inserirTelefone(t1);
+		
+		Telefone t2 = new Telefone();
+		t2.setPessoaID(0);
+		t2.setTelefone("4132463644");
+		TelefonesDAO.inserirTelefone(t2);
+	}
+
+}
