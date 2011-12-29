@@ -1,0 +1,91 @@
+!SESSION 2011-12-28 22:21:14.699 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.reporting.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.reporting.product
+
+!ENTRY org.eclipse.jdt.core 4 2 2011-12-28 22:40:01.978
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core".
+!STACK 0
+java.lang.IllegalArgumentException
+	at java.util.zip.ZipInputStream.getUTF8String(ZipInputStream.java:324)
+	at java.util.zip.ZipInputStream.readLOC(ZipInputStream.java:264)
+	at java.util.zip.ZipInputStream.getNextEntry(ZipInputStream.java:91)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.updateJAR(ProjectDescription.java:2318)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription$Indexer.visit(ProjectDescription.java:218)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:65)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:127)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:75)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.index(ProjectDescription.java:1463)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.restoreReferences(ProjectDescription.java:1909)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.<init>(ProjectDescription.java:708)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex.createDescription(TaglibIndex.java:719)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.handleClasspathChange(TaglibIndex.java:177)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:102)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:95)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:79)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$4.run(DeltaProcessor.java:1670)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1660)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1494)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1470)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2082)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:470)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:4873)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter$1.run(WorkbenchRunnableAdapter.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.core 4 4 2011-12-28 22:40:01.982
+!MESSAGE Exception occurred in listener of Java element change notification
+!STACK 0
+java.lang.IllegalArgumentException
+	at java.util.zip.ZipInputStream.getUTF8String(ZipInputStream.java:324)
+	at java.util.zip.ZipInputStream.readLOC(ZipInputStream.java:264)
+	at java.util.zip.ZipInputStream.getNextEntry(ZipInputStream.java:91)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.updateJAR(ProjectDescription.java:2318)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription$Indexer.visit(ProjectDescription.java:218)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:65)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:86)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:127)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:75)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.index(ProjectDescription.java:1463)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.restoreReferences(ProjectDescription.java:1909)
+	at org.eclipse.jst.jsp.core.taglib.ProjectDescription.<init>(ProjectDescription.java:708)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex.createDescription(TaglibIndex.java:719)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.handleClasspathChange(TaglibIndex.java:177)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:102)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:95)
+	at org.eclipse.jst.jsp.core.taglib.TaglibIndex$ClasspathChangeListener.elementChanged(TaglibIndex.java:79)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$4.run(DeltaProcessor.java:1670)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1660)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1494)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1470)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2082)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:470)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:4873)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter$1.run(WorkbenchRunnableAdapter.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

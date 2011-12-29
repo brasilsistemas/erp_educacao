@@ -18,7 +18,7 @@ public class EntityManagerFactory {
 	public static EntityManager getInstanceFirebird(){
 		
 		if (managerFirebird == null){
-			managerFirebird = Persistence.createEntityManagerFactory("firebird").createEntityManager();
+			managerFirebird = Persistence.createEntityManagerFactory("hsqldb").createEntityManager();
 		}
 		
 		return managerFirebird;

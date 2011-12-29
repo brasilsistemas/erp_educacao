@@ -17,11 +17,6 @@ public class TelefonesDAO {
 		tH.setPessoaID(t.getPessoaID());
 		tH.setTelefone(t.getTelefone());
 		
-		Telefone tF = new Telefone();
-		tF.setId(t.getId());
-		tF.setPessoaID(t.getPessoaID());
-		tF.setTelefone(t.getTelefone());
-		
 		//MySQL
 		EntityManager managerMySQL = EntityManagerFactory.getInstanceMySQL();
 		try{
@@ -35,10 +30,10 @@ public class TelefonesDAO {
 		}
 		
 		//Firebird
-		EntityManager managerFirebird = EntityManagerFactory.getInstanceFirebird();
+		EntityManager managerFirebird = EntityManagerFactory.getInstance(bancoFirebird);
 		try{
 			managerFirebird.getTransaction().begin();
-			managerFirebird.persist(tF);
+			managerFirebird.persist(t);
 			managerFirebird.getTransaction().commit();
 		}
 		catch (Exception e) {

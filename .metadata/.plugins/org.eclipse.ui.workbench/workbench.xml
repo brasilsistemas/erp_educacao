@@ -22,6 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jpt.jpa.ui.internal.editors.PersistenceEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -38,6 +39,7 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -47,32 +49,36 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EntityManagerFactory.java" partName="EntityManagerFactory.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/util/EntityManagerFactory.java" title="EntityManagerFactory.java" tooltip="CadastroMySQL/src/util/EntityManagerFactory.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CadastroMySQL/src/util/EntityManagerFactory.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="597" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="569" selectionTopPixel="257"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TelefonesDAO.java" partName="TelefonesDAO.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/dao/TelefonesDAO.java" title="TelefonesDAO.java" tooltip="CadastroMySQL/src/dao/TelefonesDAO.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TelefonesDAO.java" partName="TelefonesDAO.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/dao/TelefonesDAO.java" title="TelefonesDAO.java" tooltip="CadastroMySQL/src/dao/TelefonesDAO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CadastroMySQL/src/dao/TelefonesDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="227" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1021" selectionTopPixel="334"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PessoasDAO.java" partName="PessoasDAO.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/dao/PessoasDAO.java" title="PessoasDAO.java" tooltip="CadastroMySQL/src/dao/PessoasDAO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CadastroMySQL/src/dao/PessoasDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="222" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="916" selectionTopPixel="425"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TesteDAO.java" partName="TesteDAO.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/app/TesteDAO.java" title="TesteDAO.java" tooltip="CadastroMySQL/src/app/TesteDAO.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TesteDAO.java" partName="TesteDAO.java" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/src/app/TesteDAO.java" title="TesteDAO.java" tooltip="CadastroMySQL/src/app/TesteDAO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CadastroMySQL/src/app/TesteDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="705" selectionTopPixel="79"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="636" selectionTopPixel="79"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="TransactionImpl.class" partName="TransactionImpl.class" title="TransactionImpl.class" tooltip="org.hibernate.ejb.TransactionImpl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=CadastroMySQL/\/home\/edgar\/Desenvolvimento\/Workspace\/CadastroMySQL\/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb(TransactionImpl.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -91,12 +97,12 @@
 </view>
 <view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (6 items)"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="618" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -106,6 +112,7 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
@@ -143,9 +150,7 @@
 </view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
-<sorter groupBy="CATEGORY_QUERY">
-<sorter>
-<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
 <sort1 sortDirection="1" sortKey="RANK"/>
 <sort2 sortDirection="1" sortKey="DATE_CREATED"/>
 <sort3 sortDirection="1" sortKey="NONE"/>
@@ -159,8 +164,8 @@
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -336,6 +341,7 @@
 <perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
 <fastViews>
@@ -343,11 +349,6 @@
 <view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
 <view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.46507666"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@6f69040c" orientation="256" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="1">
@@ -364,15 +365,17 @@
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wb.core.StructureView" label="LabelNotFound"/>
 <page content="org.eclipse.wb.core.PaletteView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">
@@ -384,7 +387,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.74914676" ratioLeft="439" ratioRight="147" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
@@ -396,13 +399,13 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@6f69040c" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.49886104" ratioLeft="219" ratioRight="220" relationship="4" relative="org.eclipse.ui.internal.ViewStack@6f69040c">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
@@ -485,7 +488,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7495741" ratioLeft="440" ratioRight="147" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.61130136" ratioLeft="357" ratioRight="227" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -501,7 +504,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.45" ratioLeft="198" ratioRight="242" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info part="org.eclipse.ui.editorss" ratio="0.2327189" ratioLeft="101" ratioRight="333" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 <info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496124" ratioLeft="967" ratioRight="323" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -530,159 +533,148 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CadastroMySQL/src/util/EntityManagerFactory.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CadastroMySQL/src/dao/PessoasDAO.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CadastroMySQL/src/app/TesteDAO.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CadastroMySQL/src/dao/TelefonesDAO.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=CadastroMySQL/\/home\/edgar\/Desenvolvimento\/Workspace\/CadastroMySQL\/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb(Ejb3Configuration.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jpt.jpa.ui.internal.editors.PersistenceEditor" path="/CadastroMySQL/src/META-INF/persistence.xml"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=CadastroMySQL/\/home\/edgar\/Desenvolvimento\/Workspace\/CadastroMySQL\/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb(TransactionImpl.class"/>
 </editors>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="269" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="360" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="481" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="509" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="346" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="568" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
+<item historyLabel="PessoasDAO.java" index="1">
 <position info="not_deleted" x="320" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="248" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="350" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="378" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="320" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="401" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="269" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="297" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="520" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="320" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="636" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="360" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="562" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="439" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="590" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="481" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="755" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="509" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="840" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="1013" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="885" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="1094" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="917" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="1137" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="1167" y="0"/>
-</item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="1318" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="355" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="402" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="427" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="460" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="492" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="513" y="0"/>
-</item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="545" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="282" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="314" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="337" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="372" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="420" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="499" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="541" y="0"/>
-</item>
-<item historyLabel="TelefonesDAO.java" index="2">
+<item historyLabel="EntityManagerFactory.java" index="0">
 <position info="not_deleted" x="569" y="0"/>
 </item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1073" y="0"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
 </item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1154" y="0"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="295" y="0"/>
 </item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1197" y="0"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="320" y="0"/>
 </item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1227" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="269" y="0"/>
 </item>
-<item historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1378" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="584" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="320" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="616" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="350" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="637" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="378" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="669" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="401" y="0"/>
 </item>
-<item historyLabel="TesteDAO.java" index="1">
-<position info="not_deleted" x="705" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="441" y="0"/>
 </item>
-<item historyLabel="PessoasDAO.java" index="0">
-<position info="not_deleted" x="222" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="520" y="0"/>
 </item>
-<item active="true" historyLabel="TelefonesDAO.java" index="2">
-<position info="not_deleted" x="1378" y="0"/>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="590" y="0"/>
+</item>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="755" y="0"/>
+</item>
+<item historyLabel="Ejb3Configuration.class" index="3">
+<position/>
+</item>
+<item historyLabel="PessoasDAO.java" index="1">
+<position info="not_deleted" x="916" y="0"/>
+</item>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="Ejb3Configuration.class" index="3">
+<position/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="TransactionImpl.class" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="Ejb3Configuration.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="TransactionImpl.class" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="TransactionImpl.class" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="persistence.xml" index="4"/>
+<item active="true" historyLabel="TesteDAO.java" index="2">
+<position info="not_deleted" x="248" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -710,6 +702,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="TransactionImpl.class" tooltip="org.hibernate.ejb.TransactionImpl">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=CadastroMySQL/\/home\/edgar\/Desenvolvimento\/Workspace\/CadastroMySQL\/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb(TransactionImpl.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Ejb3Configuration.class" tooltip="org.hibernate.ejb.Ejb3Configuration">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=CadastroMySQL/\/home\/edgar\/Desenvolvimento\/Workspace\/CadastroMySQL\/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb(Ejb3Configuration.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TesteDAO.java" tooltip="CadastroMySQL/src/app/TesteDAO.java">
 <persistable path="/CadastroMySQL/src/app/TesteDAO.java"/>
 </file>

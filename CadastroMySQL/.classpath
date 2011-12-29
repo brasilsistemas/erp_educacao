@@ -35,5 +35,6 @@
 	<classpathentry kind="lib" path="/home/edgar/Desenvolvimento/Workspace/CadastroMySQL/lib/mysql-connector-java-5.1.18-bin.jar"/>
 	<classpathentry kind="lib" path="/home/edgar/Desenvolvimento/Workspace/CadastroMySQL/lib/org-netbeans-modules-print.jar"/>
 	<classpathentry kind="lib" path="/home/edgar/Desenvolvimento/Workspace/CadastroMySQL/lib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/edgar/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/jaybird-full-2.1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

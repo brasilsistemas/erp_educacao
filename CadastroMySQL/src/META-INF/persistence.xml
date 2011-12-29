@@ -14,11 +14,11 @@
   
   <persistence-unit name="firebird" transaction-type="RESOURCE_LOCAL">
     <properties>
-      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-      <property name="hibernate.connection.user" value="root"/>
-      <property name="hibernate.connection.password" value="123456"/>
-      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cadastro_base"/>
-      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.FirebirdDialect" />
+      <property name="hibernate.connection.user" value="SYSDBA"/>
+      <property name="hibernate.connection.password" value="masterkey"/>
+      <property name="hibernate.connection.url" value="jdbc:firebirdsql:localhost/3050:/home/edgar/Desenvolvimento/DataBase/Firebird/Bases/teste.fdb"/>
+      <property name="hibernate.connection.driver_class" value="org.firebirdsql.jdbc.FBDriver"/>
       <property name="hibernate.max_fetch_depth" value="3"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.hbm2ddl.auto" value="update"/>

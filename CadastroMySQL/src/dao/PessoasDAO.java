@@ -15,6 +15,10 @@ public class PessoasDAO {
 		pH.setId(p.getId());
 		pH.setNome(p.getNome());
 		
+		Pessoa pF = new Pessoa();
+		pF.setId(p.getId());
+		pF.setNome(p.getNome());
+		
 		//MySQL
 		EntityManager managerMySQL = EntityManagerFactory.getInstanceMySQL();
 		try{
@@ -26,19 +30,19 @@ public class PessoasDAO {
 			// TODO: handle exception
 			managerMySQL.getTransaction().rollback();
 		}
-		/*
+		
 		//Firebird
-		EntityManager managerFirebird = EntityManagerFactory.getInstance(bancoFirebird);
+		EntityManager managerFirebird = EntityManagerFactory.getInstanceFirebird();
 		try{
 			managerFirebird.getTransaction().begin();
-			managerFirebird.persist(p);
+			managerFirebird.persist(pF);
 			managerFirebird.getTransaction().commit();
 		}
 		catch (Exception e) {
 			// TODO: handle exception
 			managerFirebird.getTransaction().rollback();
 		}
-		*/
+		
 		//HSQLDB
 		EntityManager managerHSQLDB = EntityManagerFactory.getInstanceHSQLDB();
 		try{

@@ -17,11 +17,11 @@ public class EntityManagerFactory {
 	
 	public static EntityManager getInstanceFirebird(){
 		
-		if (managerFirebird == null){
-			managerFirebird = Persistence.createEntityManagerFactory("firebird").createEntityManager();
+		if (managerHSQLDB == null){
+			managerHSQLDB = Persistence.createEntityManagerFactory("hsqldb").createEntityManager();
 		}
 		
-		return managerFirebird;
+		return managerHSQLDB;
 	}
 
 	public static EntityManager getInstanceHSQLDB(){
