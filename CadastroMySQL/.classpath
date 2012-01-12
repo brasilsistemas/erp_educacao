@@ -37,5 +37,9 @@
 	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/org-netbeans-modules-print.jar"/>
 	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/standard.jar"/>
 	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/ojdbc5.jar"/>
+	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/postgresql-9.0-801.jdbc4.jar"/>
+	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/postgresql-9.0-801.jdbc3.jar"/>
+	<classpathentry kind="lib" path="D:/Desenvolvimento/Repositorio/erp_educacao/CadastroMySQL/lib/sqljdbc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

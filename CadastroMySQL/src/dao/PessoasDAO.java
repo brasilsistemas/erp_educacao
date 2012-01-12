@@ -1,11 +1,10 @@
 package dao;
 
+import javax.persistence.EntityManager;
+
+import util.EntityManagerFactory;
 import entidades.Pessoa;
 import entidades.Pessoas;
-import util.EntityManagerFactory;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
 public class PessoasDAO {
 	
@@ -22,6 +21,14 @@ public class PessoasDAO {
 		Pessoa pOra = new Pessoa();
 		pOra.setId(p.getId());
 		pOra.setNome(p.getNome());
+		
+		Pessoa pSQL = new Pessoa();
+		pSQL.setId(p.getId());
+		pSQL.setNome(p.getNome());
+		
+		Pessoa pPos = new Pessoa();
+		pPos.setId(p.getId());
+		pPos.setNome(p.getNome());
 		
 		//MySQL
 		EntityManager managerMySQL = EntityManagerFactory.getInstanceMySQL();
@@ -69,7 +76,29 @@ public class PessoasDAO {
 		catch (Exception e) {
 			// TODO: handle exception
 			managerOracle.getTransaction().rollback();
-		}		
+		}
+		
+		//SQLServer
+		EntityManager managerSQLServer = EntityManagerFactory.getInstanceSQLServer();
+		try {
+			managerSQLServer.getTransaction().begin();
+			managerSQLServer.persist(pSQL);
+			managerSQLServer.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerSQLServer.getTransaction().rollback();
+		}	
+		
+		//Postgre
+		EntityManager managerPostgre = EntityManagerFactory.getInstancePostgre();
+		try {
+			managerPostgre.getTransaction().begin();
+			managerPostgre.persist(pPos);
+			managerPostgre.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerPostgre.getTransaction().rollback();
+		}
 	}
 			
 	public static void inserirPessoas(Pessoas p){

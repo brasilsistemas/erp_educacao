@@ -27,6 +27,16 @@ public class TelefonesDAO {
 		tOra.setPessoaID(t.getPessoaID());
 		tOra.setTelefone(t.getTelefone());
 		
+		Telefone tSQL = new Telefone();
+		tSQL.setId(t.getId());
+		tSQL.setPessoaID(t.getPessoaID());
+		tSQL.setTelefone(t.getTelefone());
+		
+		Telefone tPos = new Telefone();
+		tPos.setId(t.getId());
+		tPos.setPessoaID(t.getPessoaID());
+		tPos.setTelefone(t.getTelefone());
+		
 		//MySQL
 		EntityManager managerMySQL = EntityManagerFactory.getInstanceMySQL();
 		try{
@@ -73,6 +83,28 @@ public class TelefonesDAO {
 		catch (Exception e) {
 			// TODO: handle exception
 			managerOracle.getTransaction().rollback();
+		}
+		
+		//SQLServer
+		EntityManager managerSQLServer = EntityManagerFactory.getInstanceSQLServer();
+		try {
+			managerSQLServer.getTransaction().begin();
+			managerSQLServer.persist(tSQL);
+			managerSQLServer.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerSQLServer.getTransaction().rollback();
+		}
+
+		//Postgre
+		EntityManager managerPostgre = EntityManagerFactory.getInstancePostgre();
+		try {
+			managerPostgre.getTransaction().begin();
+			managerPostgre.persist(tPos);
+			managerPostgre.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerPostgre.getTransaction().rollback();
 		}
 	}
 	

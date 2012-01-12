@@ -1,0 +1,92 @@
+<persistence>
+  <persistence-unit name="mysql" transaction-type="RESOURCE_LOCAL">
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+      <property name="hibernate.connection.user" value="root"/>
+      <property name="hibernate.connection.password" value="123456"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cadastro_base"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="firebird" transaction-type="RESOURCE_LOCAL">
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.FirebirdDialect" />
+      <property name="hibernate.connection.user" value="SYSDBA"/>
+      <property name="hibernate.connection.password" value="masterkey"/>
+      <property name="hibernate.connection.url" value="jdbc:firebirdsql:localhost/3050:D:\Desenvolvimento\DataBase\Firebird\Bases\TESTE.GDB"/>
+      <property name="hibernate.connection.driver_class" value="org.firebirdsql.jdbc.FBDriver"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="hsqldb" transaction-type="RESOURCE_LOCAL">
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+      <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+      <property name="hibernate.connection.username" value="sa"/>
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.connection.url" value="jdbc:hsqldb:hsql://localhost"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="oracle" transaction-type="RESOURCE_LOCAL">
+    <properties>
+      <property name="hibernate.connection.username" value="system"/>
+      <property name="hibernate.connection.password" value="Daisuki!13"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>      
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="sqlserver" transaction-type="RESOURCE_LOCAL">
+    <properties>
+      <property name="hibernate.connection.username" value="system"/>
+      <property name="hibernate.connection.password" value="Daisuki!13"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2008Dialect"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>      
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="postgre" transaction-type="RESOURCE_LOCAL">
+    <properties>
+    
+      <property name="hibernate.connection.username" value="sa"/>
+      <property name="hibernate.connection.password" value="Daisuki!13"/>      
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/TesteDB"/>
+      <property name="hibernate.connection.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.max_fetch_depth" value="3"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      
+      
+      <property name="hibernate.connection.username" value="system"/>
+      <property name="hibernate.connection.password" value="Daisuki!13"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      
+      <property name="hibernate.hbm2ddl.auto" value="update"/>      
+    </properties>
+  </persistence-unit>
+</persistence>
+

@@ -4,7 +4,7 @@ import javax.persistence.Persistence;
 import javax.persistence.EntityManager;
 
 public class EntityManagerFactory {
-	private static EntityManager managerMySQL, managerHSQLDB, managerFirebird, managerOracle;
+	private static EntityManager managerMySQL, managerHSQLDB, managerFirebird, managerOracle, managerSQLServer, managerPostgre;
 	
 	public static EntityManager getInstanceMySQL(){
 		
@@ -41,4 +41,22 @@ public class EntityManagerFactory {
 		
 		return managerOracle;
 	}
+	
+	public static EntityManager getInstanceSQLServer(){
+		
+		if (managerSQLServer == null){
+			managerSQLServer = Persistence.createEntityManagerFactory("sqlserver").createEntityManager();
+		}
+		
+		return managerSQLServer;
+	}
+
+	public static EntityManager getInstancePostgre(){
+	
+	if (managerPostgre == null){
+		managerPostgre = Persistence.createEntityManagerFactory("postgre").createEntityManager();
+	}
+	
+	return managerPostgre;
+}
 }
