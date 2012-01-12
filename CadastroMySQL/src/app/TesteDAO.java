@@ -11,8 +11,7 @@ public class TesteDAO {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	
 		Pessoa p1 = new Pessoa();
 		
 		//p.setId(2);
@@ -32,7 +31,7 @@ public class TesteDAO {
 		
 		Telefone t2 = new Telefone();
 		t2.setPessoaID(0);
-		t2.setTelefone("4132463644");
+		t2.setTelefone("4184585832");
 		TelefonesDAO.inserirTelefone(t2);
 	}
 

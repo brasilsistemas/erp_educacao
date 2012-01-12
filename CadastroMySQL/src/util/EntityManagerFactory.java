@@ -4,7 +4,7 @@ import javax.persistence.Persistence;
 import javax.persistence.EntityManager;
 
 public class EntityManagerFactory {
-	private static EntityManager managerMySQL, managerHSQLDB, managerFirebird;
+	private static EntityManager managerMySQL, managerHSQLDB, managerFirebird, managerOracle;
 	
 	public static EntityManager getInstanceMySQL(){
 		
@@ -31,5 +31,14 @@ public class EntityManagerFactory {
 		}
 		
 		return managerHSQLDB;
+	}
+	
+	public static EntityManager getInstanceOracle(){
+		
+		if (managerOracle == null){
+			managerOracle = Persistence.createEntityManagerFactory("oracle").createEntityManager();
+		}
+		
+		return managerOracle;
 	}
 }
