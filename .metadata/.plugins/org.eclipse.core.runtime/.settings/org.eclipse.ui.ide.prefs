@@ -1,8 +1,10 @@
-#Thu Jan 12 19:11:17 BRST 2012
+#Thu Jan 12 23:59:58 BRST 2012
+IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 SWITCH_PERSPECTIVE_ON_PROJECT_CREATION=always
-eclipse.preferences.version=1
+PROBLEMS_FILTERS_MIGRATE=true
+quickStart=false
 tipsAndTricks=true
+eclipse.preferences.version=1
 platformState=1326383552981
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
-quickStart=false
-PROBLEMS_FILTERS_MIGRATE=true
+IMPORT_FILES_AND_FOLDERS_TYPE=23,1

@@ -1,0 +1,63 @@
+package app;
+
+import entidades.Pessoa;
+import dao.PessoasDAO;
+import entidades.Telefone;
+import dao.TelefonesDAO;
+
+public class TesteDAO {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	
+		String nome = "nome_teste_";
+		int idTelefone = 0;
+		
+		Pessoa pessoa = new Pessoa();
+		Telefone telefone = new Telefone();
+		
+		for(int idPessoa=1; idPessoa<1000000; idPessoa++){
+			pessoa.setId(idPessoa);
+			pessoa.setNome(nome + Integer.toString(idPessoa));
+			PessoasDAO.inserirPessoa(pessoa);
+			
+			idTelefone = idTelefone + 1;
+			telefone.setId(idTelefone);
+			telefone.setPessoaID(idPessoa);
+			telefone.setTelefone(Integer.toString(idTelefone));
+			TelefonesDAO.inserirTelefone(telefone);
+			
+			idTelefone = idTelefone + 1;
+			telefone.setId(idTelefone);
+			telefone.setPessoaID(idPessoa);
+			telefone.setTelefone(Integer.toString(idTelefone));
+			TelefonesDAO.inserirTelefone(telefone);
+		}
+		
+		
+		Pessoa p1 = new Pessoa();
+		
+		//p.setId(2);
+		p1.setNome("Teste10");
+		PessoasDAO.inserirPessoa(p1);
+		
+		Pessoa p2 = new Pessoa();
+		
+		//p.setId(3);
+		p2.setNome("Teste11");
+		PessoasDAO.inserirPessoa(p2);
+
+		Telefone t1 = new Telefone();
+		t1.setPessoaID(0);
+		t1.setTelefone("4132463644");
+		TelefonesDAO.inserirTelefone(t1);
+		
+		Telefone t2 = new Telefone();
+		t2.setPessoaID(0);
+		t2.setTelefone("4184585832");
+		TelefonesDAO.inserirTelefone(t2);
+	}
+
+}
