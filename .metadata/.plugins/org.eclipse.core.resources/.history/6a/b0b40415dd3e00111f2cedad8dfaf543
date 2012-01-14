@@ -1,0 +1,32 @@
+package dao;
+
+import entidades.Telefone;
+import util.EntityManagerFactory;
+import javax.persistence.EntityManager;
+
+public class TelefonesDAO {
+	
+	public static void inserirTelefone(Telefone t){
+		
+		Telefone tPostgre = new Telefone();
+		tPostgre.setTelefoneID(t.getTelefoneID());
+		tPostgre.setPessoaID(t.getPessoaID());
+		tPostgre.setTelefone(t.getTelefone());
+		tPostgre.setPessoa(t.getPessoa());
+		
+		//Postgre
+		EntityManager managerPostgre = EntityManagerFactory.getInstancePostgre();
+		try {
+			managerPostgre.getTransaction().begin();
+			managerPostgre.persist(tPostgre);
+			managerPostgre.refresh(tPostgre.getPessoa());
+			managerPostgre.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerPostgre.getTransaction().rollback();
+		}
+
+		tPostgre = null;
+		System.gc();
+	}
+}

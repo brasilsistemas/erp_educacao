@@ -1,0 +1,39 @@
+package dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import util.EntityManagerFactoryFirebird;
+import util.EntityManagerFactoryHSQLDB;
+import entidades.PessoaFirebird;
+import entidades.PessoaHSQLDB;
+
+public class PessoasDAOHSQLDB {
+	
+	public static int inserirPessoa(PessoaHSQLDB pHSQLDB){
+
+		int result = pHSQLDB.getId();
+		
+		//HSQLDB
+		EntityManager managerHSQLDB = EntityManagerFactoryHSQLDB.getInstanceHSQLDB();
+		try{
+			managerHSQLDB.getTransaction().begin();
+			managerHSQLDB.persist(pHSQLDB);
+			managerHSQLDB.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerHSQLDB.getTransaction().rollback();
+		}
+		
+		return result;
+	}
+	
+	public static PessoaFirebird atualizarObjeto(int id){
+		EntityManager managerFirebird = EntityManagerFactoryFirebird.getInstanceFirebird();
+		Query q = managerFirebird.createQuery("FROM Pessoa WHERE pessoaID = :ID");
+		q.setParameter("ID", id);
+		PessoaFirebird pes = (PessoaFirebird) q.getSingleResult();
+		return pes;
+	}
+}

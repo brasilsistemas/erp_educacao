@@ -1,0 +1,62 @@
+package app;
+
+import java.text.DecimalFormat;
+
+import entidades.Pessoa;
+import entidades.Telefone;
+import dao.PessoasDAO;
+import dao.TelefonesDAO;
+
+public class TesteDAO {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+	
+		String nome = "nome_teste_";
+		int numeroTelefone = 0;
+		DecimalFormat df = new DecimalFormat();  
+	    df.applyPattern("0000000000");  
+	    
+	    /*JPAUtil jpaUtil = new JPAUtil();
+	    jpaUtil.executeSQLCommandFirebird("CREATE SEQUENCE seq_pess_id;");
+	    jpaUtil.executeSQLCommandFirebird("CREATE SEQUENCE seq_tel_id;");
+	    
+	    jpaUtil.executeSQLCommandOracle("CREATE SEQUENCE seq_pess_id");
+	    jpaUtil.executeSQLCommandOracle("CREATE SEQUENCE seq_tel_id");
+	    
+	    jpaUtil.executeSQLCommandPostgre("CREATE SEQUENCE seq_pess_id;");
+	    jpaUtil.executeSQLCommandPostgre("CREATE SEQUENCE seq_tel_id;");*/
+	    
+	     
+		for(int idPessoa=1; idPessoa<5; idPessoa++){
+			Pessoa pessoa = new Pessoa();
+			
+			pessoa.setNome(nome + Integer.toString(idPessoa));
+			pessoa.setPessoaID(PessoasDAO.inserirPessoa(pessoa));
+			/* pessID = PessoasDAO.inserirPessoa(pessoa);
+			 * pessoa = PessoasDAO.atualizarObjeto(pessID);*/
+			
+			Telefone telefone = new Telefone();
+			numeroTelefone += 1;
+			telefone.setTelefone(df.format(Double.parseDouble(Integer.toString(numeroTelefone))));
+			telefone.setPessoa(pessoa);
+			telefone.setPessoaID(pessoa.getPessoaID());
+			TelefonesDAO.inserirTelefone(telefone);
+			
+			Telefone telefone2 = new Telefone();
+			numeroTelefone += 1;
+			telefone2.setTelefone(df.format(Double.parseDouble(Integer.toString(numeroTelefone))));
+			telefone2.setPessoa(pessoa);
+			telefone2.setPessoaID(pessoa.getPessoaID());
+			TelefonesDAO.inserirTelefone(telefone2);
+
+			pessoa = null;
+			telefone = null;
+			telefone2 = null;
+			System.gc();
+		}
+	}
+}

@@ -1,0 +1,37 @@
+package dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import util.EntityManagerFactoryFirebird;
+import entidades.PessoaFirebird;
+
+public class PessoasDAOFirebird {
+	
+	public static int inserirPessoa(PessoaFirebird pessoaFirebird){
+		
+		int result = pessoaFirebird.getPessoaID();
+		
+		//Firebird
+		EntityManager managerFirebird = EntityManagerFactoryFirebird.getInstanceFirebird();
+		try{
+			managerFirebird.getTransaction().begin();
+			managerFirebird.persist(pessoaFirebird);
+			managerFirebird.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerFirebird.getTransaction().rollback();
+		}
+		
+		return result;
+	}
+	
+	public static PessoaFirebird atualizarObjeto(int id){
+		EntityManager managerFirebird = EntityManagerFactoryFirebird.getInstanceFirebird();
+		Query q = managerFirebird.createQuery("FROM PessoaFirebird WHERE pessoaID = :ID");
+		q.setParameter("ID", id);
+		PessoaFirebird pes = (PessoaFirebird) q.getSingleResult();
+		return pes;
+	}
+}

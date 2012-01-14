@@ -1,0 +1,71 @@
+package entidades;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TELEFONE")
+public class Telefone {
+	
+	/*
+	   @Column(updatable = false, name = "flight_name", nullable = false, length=50) 
+	   1 name (optional): the column name (default to the property name)
+	   2 unique (optional): set a unique constraint on this column or not (default false)
+	   3 nullable (optional): set the column as nullable (default true).
+	   4 insertable (optional): whether or not the column will be part of the insert statement (default true)
+	   5 updatable (optional): whether or not the column will be part of the update statement (default true)
+	   6 columnDefinition (optional): override the sql DDL fragment for this particular column (non portable)
+	   7 table (optional): define the targeted table (default primary table)
+	   8 length (optional): column length (default 255)
+	   9 precision (optional): column decimal precision (default 0)
+	   10 scale (optional): column decimal scale if useful (default 0)
+	 */
+	
+	@Id
+	@javax.persistence.SequenceGenerator(name="SEQ_TELEFONE_ID", sequenceName="seq_tel_id")
+	@GeneratedValue(generator="SEQ_TELEFONE_ID")
+	private int telefoneID;
+	@Column (name="PessoaID")
+	private int pessoaID;
+	@Column (name="Telefone")
+	private String telefone;
+	
+	@ManyToOne(optional=true)
+	@JoinTable(name = "ParentChild", 
+	           joinColumns = {@JoinColumn(name="childrenId")},
+	           inverseJoinColumns = {@JoinColumn(name="parentId")}
+	          )  
+    private Pessoa pessoa; 
+	
+	public int getId() {
+		return telefoneID;
+	}
+	public void setId(int id) {
+		this.telefoneID = id;
+	}
+	public int getPessoaID() {
+		return pessoaID;
+	}
+	public void setPessoaID(int pessoaID) {
+		this.pessoaID = pessoaID;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+}

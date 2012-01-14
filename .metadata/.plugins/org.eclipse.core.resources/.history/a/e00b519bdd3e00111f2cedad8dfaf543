@@ -1,0 +1,33 @@
+package dao;
+
+import entidades.TelefoneFirebird;
+import util.EntityManagerFactoryFirebird;
+import javax.persistence.EntityManager;
+
+public class TelefonesDAOFirebird {
+	
+	public static void inserirTelefone(TelefoneFirebird t){
+		
+		TelefoneFirebird tFirebird = new TelefoneFirebird();
+		tFirebird.setTelefoneID(t.getTelefoneID());
+		tFirebird.setPessoaID(t.getPessoaID());
+		tFirebird.setTelefone(t.getTelefone());
+		tFirebird.setPessoa(t.getPessoa());
+
+		//Firebird
+		EntityManager managerFirebird = EntityManagerFactoryFirebird.getInstanceFirebird();
+		try{
+			managerFirebird.getTransaction().begin();
+			managerFirebird.persist(tFirebird);
+			managerFirebird.refresh(tFirebird.getPessoa());
+			managerFirebird.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerFirebird.getTransaction().rollback();
+		}
+		
+		tFirebird = null;
+		System.gc();
+	}
+}

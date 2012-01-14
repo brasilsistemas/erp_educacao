@@ -1,0 +1,23 @@
+package dao;
+
+import entidades.Telefone;
+import util.EntityManagerFactory;
+import javax.persistence.EntityManager;
+
+public class TelefonesDAO {
+	
+	public static void inserirTelefone(Telefone t){
+		
+		//HSQLDB
+		EntityManager managerHSQLDB = EntityManagerFactory.getInstanceHSQLDB();
+		try{
+			managerHSQLDB.getTransaction().begin();
+			managerHSQLDB.persist(t);
+			managerHSQLDB.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerHSQLDB.getTransaction().rollback();
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JPAUtil.java&apos; to &apos;CadastroBase/src/util&apos;&#x0D;&#x0A;- Original project: &apos;TesteJPA&apos;&#x0D;&#x0A;- Destination element: &apos;CadastroBase/src/util&apos;&#x0D;&#x0A;- Original element: &apos;JPAUtil.java&apos;" description="Copy compilation unit" destination="=CadastroBase/src&lt;util" element1="/src&lt;{JPAUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1326546664995" units="1" version="1.0"/>
+</session>

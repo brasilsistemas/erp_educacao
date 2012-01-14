@@ -1,0 +1,32 @@
+package util;
+import java.io.Reader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+
+public class JPAUtil {
+  Statement st;
+  
+  public JPAUtil() throws Exception{
+	  Class.forName("org.hsqldb.jdbcDriver");
+	  System.out.println("Driver Loaded.");
+	  String url = "jdbc:hsqldb:data/tutorial";
+
+	  Connection conn = DriverManager.getConnection(url, "sa", "");
+	  System.out.println("Got Connection.");
+	  st = conn.createStatement();
+  }
+  
+  public void executeSQLCommandFirebird(String sql) throws Exception {
+	  st.executeUpdate(sql);
+  }
+  
+  public void executeSQLCommandOracle(String sql) throws Exception {
+	  st.executeUpdate(sql);
+  }
+  public void executeSQLCommandPostgre(String sql) throws Exception {
+	  st.executeUpdate(sql);
+  }
+}

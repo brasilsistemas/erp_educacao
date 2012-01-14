@@ -1,0 +1,34 @@
+package entidades;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PESSOA")
+public class Pessoa {
+	
+	@Id
+	@javax.persistence.SequenceGenerator(name="SEQ_PESSOA_ID", sequenceName="seq_pess_id", initialValue=1, allocationSize=9)
+	@GeneratedValue(generator="SEQ_PESSOA_ID")
+	private int id;
+	@Column (name="Nome")
+	private String nome;
+	
+	private List<Telefone> telefones = new List<Telefone>();
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+}

@@ -1,0 +1,23 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+import util.EntityManagerFactory;
+import entidades.Pessoa;
+
+public class PessoasDAO {
+	
+	public static void inserirPessoa(Pessoa pMsSqlServer){
+
+		//SQLServer
+		EntityManager managerSQLServer = EntityManagerFactory.getInstanceSQLServer();
+		try {
+			managerSQLServer.getTransaction().begin();
+			managerSQLServer.persist(pMsSqlServer);
+			managerSQLServer.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerSQLServer.getTransaction().rollback();
+		}	
+	}
+}

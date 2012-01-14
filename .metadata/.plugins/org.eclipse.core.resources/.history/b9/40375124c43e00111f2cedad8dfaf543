@@ -1,0 +1,73 @@
+package app;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import entidades.Pessoa;
+import entidades.Telefone;
+import dao.PessoasDAO;
+import dao.TelefonesDAO;
+import util.JPAUtil;
+
+public class TesteDAO {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+	
+		String nome = "nome_teste_";
+		int idTelefone = 0;
+		DecimalFormat df = new DecimalFormat();  
+	    df.applyPattern("0000000000");  
+	    
+	    /*JPAUtil jpaUtil = new JPAUtil();
+	    jpaUtil.executeSQLCommandFirebird("CREATE SEQUENCE seq_pess_id;");
+	    jpaUtil.executeSQLCommandFirebird("CREATE SEQUENCE seq_tel_id;");
+	    
+	    jpaUtil.executeSQLCommandOracle("CREATE SEQUENCE seq_pess_id");
+	    jpaUtil.executeSQLCommandOracle("CREATE SEQUENCE seq_tel_id");
+	    
+	    jpaUtil.executeSQLCommandPostgre("CREATE SEQUENCE seq_pess_id;");
+	    jpaUtil.executeSQLCommandPostgre("CREATE SEQUENCE seq_tel_id;");*/
+	    
+	     
+		for(int idPessoa=1; idPessoa<11; idPessoa++){
+			Pessoa pessoa = new Pessoa();
+			
+			pessoa.setNome(nome + Integer.toString(idPessoa));
+			PessoasDAO.inserirPessoa(pessoa);
+			pessoa PessoasDAO.atualizarObjeto(pessoa, idpessoa);
+			
+			//List<Telefone> telefones = new ArrayList<Telefone>();
+			
+			Telefone telefone = new Telefone();
+			idTelefone = idTelefone + 1;
+			telefone.setPessoaID(idPessoa);
+			telefone.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			//telefone.setPessoa(pessoa);
+			//telefones.add(telefone);
+			TelefonesDAO.inserirTelefone(telefone);
+			
+			Telefone telefone2 = new Telefone();
+			idTelefone = idTelefone + 1;
+			telefone2.setPessoaID(idPessoa);
+			telefone2.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			//telefone2.setPessoa(pessoa);
+			//telefones.add(telefone2);
+			TelefonesDAO.inserirTelefone(telefone2);
+			
+			//TelefonesDAO.inserirTelefone(telefone);
+			//TelefonesDAO.inserirTelefone(telefone2);
+			//PessoasDAO.inserirPessoa(pessoa);
+
+			//telefones = null;
+			pessoa = null;
+			telefone = null;
+			telefone2 = null;
+			System.gc();
+		}
+	}
+}

@@ -1,0 +1,22 @@
+package dao;
+
+import entidades.Telefone;
+import util.EntityManagerFactory;
+import javax.persistence.EntityManager;
+
+public class TelefonesDAOMsSQLServer {
+	
+	public static void inserirTelefone(Telefone tMsSqlServer){
+		
+		//SQLServer
+		EntityManager managerSQLServer = EntityManagerFactory.getInstanceSQLServer();
+		try {
+			managerSQLServer.getTransaction().begin();
+			managerSQLServer.persist(tMsSqlServer);
+			managerSQLServer.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerSQLServer.getTransaction().rollback();
+		}
+	}
+}

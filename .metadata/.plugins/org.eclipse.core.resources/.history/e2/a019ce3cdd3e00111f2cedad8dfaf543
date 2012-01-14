@@ -1,0 +1,36 @@
+package dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import util.EntityManagerFactoryPostgre;
+import entidades.PessoaPostgre;
+
+public class PessoasDAOPostgre {
+	
+	public static int inserirPessoa(PessoaPostgre p){
+		
+		int result = p.getPessoaID();;
+				
+		//Postgre
+		EntityManager managerPostgre = EntityManagerFactoryPostgre.getInstancePostgre();
+		try {
+			managerPostgre.getTransaction().begin();
+			managerPostgre.persist(p);
+			managerPostgre.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerPostgre.getTransaction().rollback();
+		}
+		
+		return result;
+	}
+	
+	public static PessoaPostgre atualizarObjeto(int id){
+		EntityManager managerFirebird = EntityManagerFactoryPostgre.getInstancePostgre();
+		Query q = managerFirebird.createQuery("FROM Pessoa WHERE pessoaID = :ID");
+		q.setParameter("ID", id);
+		PessoaPostgre pes = (PessoaPostgre) q.getSingleResult();
+		return pes;
+	}
+}

@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="entidades.Pessoa"/>
 <fullyQualifiedTypeName name="entidades.Telefone"/>
 <fullyQualifiedTypeName name="dao.TelefonesDAO"/>
 <fullyQualifiedTypeName name="java.text.Format"/>
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="entidades.PessoaGenerateAuto"/>
+<fullyQualifiedTypeName name="util.JPAUtil"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="dao.PessoasDAO"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="entidades.Pessoa"/>
+<fullyQualifiedTypeName name="entidades.PessoaHSQLDB"/>
+<fullyQualifiedTypeName name="entidades.TelefoneHSQLDB"/>
+<fullyQualifiedTypeName name="entidades.TelefoneMsSQLServer"/>
+<fullyQualifiedTypeName name="entidades.TelefoneMySQL"/>
+<fullyQualifiedTypeName name="entidades.PessoaMsSQLServer"/>
+<fullyQualifiedTypeName name="entidades.PessoaMySQL"/>
+<fullyQualifiedTypeName name="util.EntityManagerFactoryMsSQLServer"/>
+<fullyQualifiedTypeName name="util.EntityManagerFactoryHSQLDB"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="entidades.PessoaFirebird"/>
 </qualifiedTypeNameHistroy>

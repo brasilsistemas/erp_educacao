@@ -1,0 +1,45 @@
+package dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import util.EntityManagerFactory;
+import entidades.PessoaOracle;
+
+public class PessoasDAOOracle {
+	
+	public static int inserirPessoa(PessoaOracle p){
+		
+		int result = 0;
+					
+		PessoaOracle pOracle = new PessoaOracle();
+		pOracle.setPessoaID(p.getPessoaID());
+		pOracle.setNome(p.getNome());
+		
+		//Oracle
+		EntityManager managerOracle = EntityManagerFactory.getInstanceOracle();
+		try{
+			managerOracle.getTransaction().begin();
+			managerOracle.persist(pOracle);
+			result = pOracle.getPessoaID();
+			managerOracle.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerOracle.getTransaction().rollback();
+		}
+		
+		pOracle = null;
+		System.gc();
+		
+		return result;
+	}
+	
+	public static PessoaOracle atualizarObjeto(int id){
+		EntityManager managerFirebird = EntityManagerFactory.getInstanceOracle();
+		Query q = managerFirebird.createQuery("FROM Pessoa WHERE pessoaID = :ID");
+		q.setParameter("ID", id);
+		PessoaOracle pes = (PessoaOracle) q.getSingleResult();
+		return pes;
+	}
+}

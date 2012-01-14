@@ -1,0 +1,48 @@
+package entidades;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PESSOA")
+public class Pessoa {
+	
+	@Id
+	@javax.persistence.SequenceGenerator(name="SEQ_PESSOA_ID", sequenceName="seq_pess_id", initialValue=1, allocationSize=9)
+	@GeneratedValue(generator="SEQ_PESSOA_ID")
+	private int pessoaID;
+	@Column (name="Nome")
+	private String nome;
+	
+	@OneToMany
+	private List<Telefone> telefones = new ArrayList<Telefone>();
+	
+	public int getId() {
+		return pessoaID;
+	}
+	public void setId(int id) {
+		this.pessoaID = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
+	}
+}

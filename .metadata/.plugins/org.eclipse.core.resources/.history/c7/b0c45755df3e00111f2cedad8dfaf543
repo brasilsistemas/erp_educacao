@@ -1,0 +1,39 @@
+package dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import util.EntityManagerFactoryFirebird;
+import util.EntityManagerFactoryMySQL;
+import entidades.PessoaFirebird;
+import entidades.PessoaMySQL;
+
+public class PessoasDAOMySQL {
+	
+	public static int inserirPessoa(PessoaMySQL pMySQL){
+		
+		int result = pMySQL.getId();
+		
+		//MySQL
+		EntityManager managerMySQL = EntityManagerFactoryMySQL.getInstanceMySQL();
+		try{
+			managerMySQL.getTransaction().begin();
+			managerMySQL.persist(pMySQL);
+			managerMySQL.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerMySQL.getTransaction().rollback();
+		}
+		
+		return result;
+	}
+	
+	public static PessoaFirebird atualizarObjeto(int id){
+		EntityManager managerFirebird = EntityManagerFactoryMySQL.getInstanceMySQL();
+		Query q = managerFirebird.createQuery("FROM Pessoa WHERE pessoaID = :ID");
+		q.setParameter("ID", id);
+		PessoaMySQL pes = (PessoaMySQL) q.getSingleResult();
+		return pes;
+	}
+}

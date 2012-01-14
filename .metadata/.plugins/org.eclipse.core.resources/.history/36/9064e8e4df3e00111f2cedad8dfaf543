@@ -1,0 +1,45 @@
+package app;
+
+import java.text.DecimalFormat;
+import entidades.PessoaMsSQLServer;
+import dao.PessoasDAOMsSQLServer;
+import entidades.TelefoneMsSQLServer;
+import dao.TelefonesDAOMsSQLServer;
+
+public class TesteDAOMsSQLServer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	
+		String nome = "nome_teste_";
+		int idTelefone = 0;
+		DecimalFormat df = new DecimalFormat();  
+	    df.applyPattern("0000000000");  
+	     
+		for(int idPessoa=1; idPessoa<11; idPessoa++){
+			PessoaMsSQLServer pessoa = new PessoaMsSQLServer();
+			
+			pessoa.setNome(nome + Integer.toString(idPessoa));
+			PessoasDAOMsSQLServer.inserirPessoa(pessoa);
+			
+			TelefoneMsSQLServer telefone = new TelefoneMsSQLServer();
+			idTelefone = idTelefone + 1;
+			telefone.setPessoaID(idPessoa);
+			telefone.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			TelefonesDAOMsSQLServer.inserirTelefone(telefone);
+			
+			TelefoneMsSQLServer telefone2 = new TelefoneMsSQLServer();
+			idTelefone = idTelefone + 1;
+			telefone2.setPessoaID(idPessoa);
+			telefone2.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			TelefonesDAOMsSQLServer.inserirTelefone(telefone2);
+			
+			pessoa = null;
+			telefone = null;
+			telefone2 = null;
+			System.gc();
+		}
+	}
+}

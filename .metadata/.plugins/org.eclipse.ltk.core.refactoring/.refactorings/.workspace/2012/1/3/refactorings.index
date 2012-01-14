@@ -1,3 +1,8 @@
 1326326732387	Delete resource 'ERP'
 1326419529756	Rename Java project 'CadastroMySQL'
 1326420204414	Delete resource 'CadastroTeste'
+1326563388341	Delete resource 'TesteJPA'
+1326563400762	Rename Java project 'Postgre'
+1326565126018	Delete resource 'CadastroBaseMsSQLServer'
+1326567155630	Delete resource 'CadastroBaseGenerateAuto'
+1326567158080	Delete resource 'CadastroBase'

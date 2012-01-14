@@ -1,0 +1,45 @@
+package app;
+
+import java.text.DecimalFormat;
+import entidades.PessoaMySQL;
+import dao.PessoasDAOMySQL;
+import entidades.TelefoneMySQL;
+import dao.TelefonesDAOMySQL;
+
+public class TesteDAOMySQL {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	
+		String nome = "nome_teste_";
+		int idTelefone = 0;
+		DecimalFormat df = new DecimalFormat();  
+	    df.applyPattern("0000000000");  
+	     
+		for(int idPessoa=1; idPessoa<11; idPessoa++){
+			PessoaMySQL pessoa = new PessoaMySQL();
+			
+			pessoa.setNome(nome + Integer.toString(idPessoa));
+			PessoasDAOMySQL.inserirPessoa(pessoa);
+			
+			TelefoneMySQL telefone = new TelefoneMySQL();
+			idTelefone = idTelefone + 1;
+			telefone.setPessoaID(idPessoa);
+			telefone.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			TelefonesDAOMySQL.inserirTelefone(telefone);
+			
+			TelefoneMySQL telefone2 = new TelefoneMySQL();
+			idTelefone = idTelefone + 1;
+			telefone2.setPessoaID(idPessoa);
+			telefone2.setTelefone(df.format(Double.parseDouble(Integer.toString(idTelefone))));
+			TelefonesDAOMySQL.inserirTelefone(telefone2);
+			
+			pessoa = null;
+			telefone = null;
+			telefone2 = null;
+			System.gc();
+		}
+	}
+}

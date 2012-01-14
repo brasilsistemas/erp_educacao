@@ -1,0 +1,66 @@
+package dao;
+
+import entidades.TelefoneMySQL;
+import util.EntityManagerFactoryMySQL;
+import javax.persistence.EntityManager;
+
+public class TelefonesDAOMySQL {
+	
+	public static void inserirTelefone(TelefoneMySQL t){
+		
+		TelefoneMySQL tMySQL = new TelefoneMySQL();
+		tMySQL.setId(t.getId());
+		tMySQL.setPessoaID(t.getPessoaID());
+		tMySQL.setTelefone(t.getTelefone());
+		
+		TelefoneMySQL tHSQLDB = new TelefoneMySQL();
+		tHSQLDB.setId(t.getId());
+		tHSQLDB.setPessoaID(t.getPessoaID());
+		tHSQLDB.setTelefone(t.getTelefone());
+		
+		TelefoneMySQL tMsSqlServer = new TelefoneMySQL();
+		tMsSqlServer.setId(t.getId());
+		tMsSqlServer.setPessoaID(t.getPessoaID());
+		tMsSqlServer.setTelefone(t.getTelefone());
+					
+		//MySQL
+		EntityManager managerMySQL = EntityManagerFactoryMySQL.getInstanceMySQL();
+		try{
+			managerMySQL.getTransaction().begin();
+			managerMySQL.persist(tMySQL);
+			managerMySQL.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerMySQL.getTransaction().rollback();
+		}
+		
+		//HSQLDB
+		EntityManager managerHSQLDB = EntityManagerFactoryMySQL.getInstanceHSQLDB();
+		try{
+			managerHSQLDB.getTransaction().begin();
+			managerHSQLDB.persist(tHSQLDB);
+			managerHSQLDB.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerHSQLDB.getTransaction().rollback();
+		}
+		
+		//SQLServer
+		EntityManager managerSQLServer = EntityManagerFactoryMySQL.getInstanceSQLServer();
+		try {
+			managerSQLServer.getTransaction().begin();
+			managerSQLServer.persist(tMsSqlServer);
+			managerSQLServer.getTransaction().commit();
+		} catch (Exception e) {
+			// TODO: handle exception
+			managerSQLServer.getTransaction().rollback();
+		}
+		
+		tMySQL = null;
+		tHSQLDB = null;
+		tMsSqlServer = null;
+		System.gc();
+	}
+}

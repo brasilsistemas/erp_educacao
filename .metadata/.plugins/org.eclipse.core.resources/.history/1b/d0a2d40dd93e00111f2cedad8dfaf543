@@ -1,0 +1,19 @@
+package util;
+
+import javax.persistence.Persistence;
+import javax.persistence.EntityManager;
+
+public class EntityManagerFactory {
+	private static EntityManager managerFirebird;
+	
+	
+	public static EntityManager getInstanceFirebird(){
+		
+		if (managerFirebird == null){
+			managerFirebird = Persistence.createEntityManagerFactory("firebird").createEntityManager();
+		}
+		
+		return managerFirebird;
+	}
+}
+}

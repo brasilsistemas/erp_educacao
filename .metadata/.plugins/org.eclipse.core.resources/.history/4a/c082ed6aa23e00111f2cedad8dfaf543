@@ -1,0 +1,53 @@
+package entidades;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Telefone {
+	
+	/*
+	   @Column(updatable = false, name = "flight_name", nullable = false, length=50) 
+	   1 name (optional): the column name (default to the property name)
+	   2 unique (optional): set a unique constraint on this column or not (default false)
+	   3 nullable (optional): set the column as nullable (default true).
+	   4 insertable (optional): whether or not the column will be part of the insert statement (default true)
+	   5 updatable (optional): whether or not the column will be part of the update statement (default true)
+	   6 columnDefinition (optional): override the sql DDL fragment for this particular column (non portable)
+	   7 table (optional): define the targeted table (default primary table)
+	   8 length (optional): column length (default 255)
+	   9 precision (optional): column decimal precision (default 0)
+	   10 scale (optional): column decimal scale if useful (default 0)
+	 */
+	
+	@Id
+	//@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_STORE"0
+	private int id;
+	@Column (name="PessoaID")
+	private int pessoaID;
+	@Column (name="Telefone")
+	private String telefone;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPessoaID() {
+		return pessoaID;
+	}
+	public void setPessoaID(int pessoaID) {
+		this.pessoaID = pessoaID;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+}

@@ -1,0 +1,5 @@
+data e hora INÍCIO teste 4 mil registros Sat Jan 14 17:18:45 BRST 2012
+
+ data e hora FIM teste 4 mil registros Sat Jan 14 17:23:04 BRST 2012
+
+04:20 min

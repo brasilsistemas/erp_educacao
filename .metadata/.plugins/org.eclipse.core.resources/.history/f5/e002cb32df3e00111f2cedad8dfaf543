@@ -1,0 +1,24 @@
+package dao;
+
+import javax.persistence.EntityManager;
+
+import util.EntityManagerFactoryMySQL;
+import entidades.PessoaMySQL;
+
+public class PessoasDAOMySQL {
+	
+	public static void inserirPessoa(PessoaMySQL pMySQL){
+		
+		//MySQL
+		EntityManager managerMySQL = EntityManagerFactoryMySQL.getInstanceMySQL();
+		try{
+			managerMySQL.getTransaction().begin();
+			managerMySQL.persist(pMySQL);
+			managerMySQL.getTransaction().commit();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			managerMySQL.getTransaction().rollback();
+		}
+	}
+}
