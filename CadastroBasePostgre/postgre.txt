@@ -2,4 +2,6 @@ data e hora INÍCIO teste 4 mil registros Sat Jan 14 18:02:52 BRST 2012
 
  data e hora FIM teste 4 mil registros Sat Jan 14 18:06:22 BRST 2012
  
- 03:30
+ 03:30 min
+  
+ tamanho base: 6 MB
